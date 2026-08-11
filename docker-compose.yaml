@@ -1,0 +1,12 @@
+services:
+  spark:
+    container_name: spark
+    ports:
+      - "4040:4040"
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+    build: .
+    tty: true
+    stdin_open: true
+    command: tail -f /dev/null
