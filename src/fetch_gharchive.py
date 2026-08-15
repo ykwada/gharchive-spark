@@ -1,7 +1,7 @@
 import requests
 import os
 
-TARGET_DATE = "2026-08-08"sd
+TARGET_DATE = "2026-08-08"
 
 def fetch_gharchive():
     for t in range(24):
