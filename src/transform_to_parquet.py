@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, to_timestamp, to_date, hour
+from pyspark.sql.functions import col, hour, to_date, to_timestamp
 
 spark = SparkSession.builder.appName("trasform_parquet").getOrCreate()
 df = spark.read.json("/app/data/raw/*.json.gz")

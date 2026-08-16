@@ -1,5 +1,6 @@
-from pyspark.sql import SparkSession
 import time
+
+from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.appName("time_compare").getOrCreate()
 
