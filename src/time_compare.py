@@ -1,6 +1,8 @@
-from pyspark.sql import SparkSession
-spark = SparkSession.builder.appName("time_compare").getOrCreate()
 import time
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("time_compare").getOrCreate()
 
 start_j = time.time()
 print(spark.read.json("/app/data/raw/*.json.gz").count())
